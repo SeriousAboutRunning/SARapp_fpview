@@ -21,5 +21,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var submitemail: UIButton!
 }
 
