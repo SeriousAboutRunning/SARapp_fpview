@@ -23,6 +23,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
+        // This allows for background to be touched by finger or click and returns to the View Controller
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
