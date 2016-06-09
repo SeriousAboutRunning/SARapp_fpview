@@ -3,9 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Serious About Running-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SAR" customModuleProvider="target" sceneMemberID="viewController">
@@ -14,67 +15,123 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zF6-24-vds">
-                                <rect key="frame" x="123" y="268" width="74" height="30"/>
-                                <state key="normal" title="Submit"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shutterstock_116584246.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1Vp-N1-65J">
+                                <rect key="frame" x="0.0" y="0.0" width="380" height="672"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <segue destination="iP3-DQ-r5R" kind="show" id="1xu-wv-ceT"/>
+                                    <outletCollection property="gestureRecognizers" destination="P4X-Y0-YMe" appends="YES" id="CqV-Md-Zwy"/>
+                                    <outletCollection property="gestureRecognizers" destination="P4X-Y0-YMe" appends="YES" id="cWs-og-GJU"/>
                                 </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serious About Running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oae-bv-UvZ">
-                                <rect key="frame" x="55" y="28" width="211" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serious About Running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oae-bv-UvZ">
+                                <rect key="frame" x="26" y="13" width="334" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="hQh-XD-TML"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mw9-QA-l5G">
-                                <rect key="frame" x="72" y="207" width="176" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ybg-mR-y1b">
+                                <rect key="frame" x="17" y="157" width="340" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuS-yh-Y9f">
+                                <rect key="frame" x="145" y="206" width="85" height="30"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="Qsz-i1-i0i"/>
+                                </constraints>
+                                <state key="normal" title="Send Email">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hFv-FU-Io2"/>
+                                    <outletCollection property="gestureRecognizers" destination="P4X-Y0-YMe" appends="YES" id="c6C-lD-0MM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AuS-yh-Y9f" firstAttribute="top" secondItem="Ybg-mR-y1b" secondAttribute="bottom" constant="19" id="95A-MK-20H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Oae-bv-UvZ" secondAttribute="trailing" constant="-1" id="GIr-31-h4e"/>
+                            <constraint firstItem="Ybg-mR-y1b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="MSD-VS-YS5"/>
+                            <constraint firstItem="AuS-yh-Y9f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VS5-kx-6PB"/>
+                            <constraint firstItem="Oae-bv-UvZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="VrK-NA-8la"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AuS-yh-Y9f" secondAttribute="bottom" constant="431" id="ZLd-iK-SYv"/>
+                            <constraint firstItem="AuS-yh-Y9f" firstAttribute="centerX" secondItem="Ybg-mR-y1b" secondAttribute="centerX" id="a8p-Cy-AXY"/>
+                            <constraint firstItem="Ybg-mR-y1b" firstAttribute="top" secondItem="Oae-bv-UvZ" secondAttribute="bottom" constant="19" id="zpK-LV-Xzg"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationItem key="navigationItem" title="Serious About Running" id="8Yg-jy-jRn"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="Label" destination="Oae-bv-UvZ" id="bfB-3H-dn0"/>
-                        <outlet property="emailTF" destination="mw9-QA-l5G" id="0pY-hx-ndc"/>
-                        <outlet property="submitemail" destination="zF6-24-vds" id="8FD-7z-Eeg"/>
+                        <outlet property="background1" destination="1Vp-N1-65J" id="LH7-7I-DVA"/>
+                        <outlet property="emailTextField" destination="Ybg-mR-y1b" id="dzY-Mg-bRM"/>
+                        <outlet property="sarLabel" destination="Oae-bv-UvZ" id="g7w-le-ubM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="P4X-Y0-YMe">
+                    <connections>
+                        <action selector="leftGesture:" destination="BYZ-38-t0r" id="qgG-Kk-Ye7"/>
+                        <segue destination="UsM-nu-otR" kind="presentation" id="qIV-ds-aR4"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="204" y="425"/>
+            <point key="canvasLocation" x="1015.5" y="424.5"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="qsZ-ui-SD8">
+        <scene sceneID="wlp-Ea-ygC">
             <objects>
-                <viewController id="iP3-DQ-r5R" sceneMemberID="viewController">
+                <viewController id="UsM-nu-otR" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tvo-iK-NbG"/>
-                        <viewControllerLayoutGuide type="bottom" id="UjH-OG-Qew"/>
+                        <viewControllerLayoutGuide type="top" id="XP9-6w-m2C"/>
+                        <viewControllerLayoutGuide type="bottom" id="ulU-gn-fQx"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kmW-Ve-kcz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <view key="view" contentMode="scaleToFill" id="imn-wL-6QO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serious About Running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZvI-Ud-ikM">
-                                <rect key="frame" x="55" y="41" width="211" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shutterstock_135035966 (1).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gV2-vt-UHW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Race Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avc-PA-zYO">
+                                <rect key="frame" x="0.0" y="129" width="375" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serious About Running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hva-K1-DbA">
+                                <rect key="frame" x="0.0" y="44" width="375" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ntW-dA-XOw">
+                                <rect key="frame" x="0.0" y="237" width="375" height="216"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <date key="date" timeIntervalSinceReferenceDate="487189091.601843">
+                                    <!--2016-06-09 18:18:11 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8RI-m3-boy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOL-Zd-XWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="425"/>
+            <point key="canvasLocation" x="1490.5" y="424.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="shutterstock_116584246.jpg" width="5616" height="3744"/>
+        <image name="shutterstock_135035966 (1).jpg" width="5456" height="3192"/>
+    </resources>
 </document>

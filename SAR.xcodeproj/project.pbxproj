@@ -14,6 +14,9 @@
 		FE25F9DB1D060F67009B621D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE25F9D91D060F67009B621D /* LaunchScreen.storyboard */; };
 		FE25F9E61D060F67009B621D /* SARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE25F9E51D060F67009B621D /* SARTests.swift */; };
 		FE25F9F11D060F67009B621D /* SARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE25F9F01D060F67009B621D /* SARUITests.swift */; };
+		FE6977941D08A14000C6F101 /* shutterstock_116584246.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE6977931D08A14000C6F101 /* shutterstock_116584246.jpg */; };
+		FE6977961D09ECC800C6F101 /* shutterstock_135035966 (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE6977951D09ECC800C6F101 /* shutterstock_135035966 (1).jpg */; };
+		FE6977981D09ED0C00C6F101 /* shutterstock_155390825 (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE6977971D09ED0C00C6F101 /* shutterstock_155390825 (1).jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		FE25F9EC1D060F67009B621D /* SARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE25F9F01D060F67009B621D /* SARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SARUITests.swift; sourceTree = "<group>"; };
 		FE25F9F21D060F67009B621D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6977931D08A14000C6F101 /* shutterstock_116584246.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shutterstock_116584246.jpg; sourceTree = "<group>"; };
+		FE6977951D09ECC800C6F101 /* shutterstock_135035966 (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shutterstock_135035966 (1).jpg"; sourceTree = "<group>"; };
+		FE6977971D09ED0C00C6F101 /* shutterstock_155390825 (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "shutterstock_155390825 (1).jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 				FE25F9D21D060F67009B621D /* ViewController.swift */,
 				FE25F9D41D060F67009B621D /* Main.storyboard */,
 				FE25F9D71D060F67009B621D /* Assets.xcassets */,
+				FE6977971D09ED0C00C6F101 /* shutterstock_155390825 (1).jpg */,
+				FE6977951D09ECC800C6F101 /* shutterstock_135035966 (1).jpg */,
+				FE6977931D08A14000C6F101 /* shutterstock_116584246.jpg */,
 				FE25F9D91D060F67009B621D /* LaunchScreen.storyboard */,
 				FE25F9DC1D060F67009B621D /* Info.plist */,
 			);
@@ -193,6 +202,7 @@
 				TargetAttributes = {
 					FE25F9CC1D060F67009B621D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 36HC4FQGBL;
 					};
 					FE25F9E01D060F67009B621D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -229,7 +239,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6977941D08A14000C6F101 /* shutterstock_116584246.jpg in Resources */,
+				FE6977981D09ED0C00C6F101 /* shutterstock_155390825 (1).jpg in Resources */,
 				FE25F9DB1D060F67009B621D /* LaunchScreen.storyboard in Resources */,
+				FE6977961D09ECC800C6F101 /* shutterstock_135035966 (1).jpg in Resources */,
 				FE25F9D81D060F67009B621D /* Assets.xcassets in Resources */,
 				FE25F9D61D060F67009B621D /* Main.storyboard in Resources */,
 			);
@@ -401,10 +414,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seriousaboutrunning.seriousaboutrunning.SAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seriousaboutrunning.seriousaboutrunning.SAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +503,7 @@
 				FE25F9F71D060F68009B621D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE25F9F81D060F68009B621D /* Build configuration list for PBXNativeTarget "SARTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +512,7 @@
 				FE25F9FA1D060F68009B621D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE25F9FB1D060F68009B621D /* Build configuration list for PBXNativeTarget "SARUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +521,7 @@
 				FE25F9FD1D060F68009B621D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

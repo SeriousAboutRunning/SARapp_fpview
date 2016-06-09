@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var background1: UIImageView!
+    
+    @IBOutlet var sarLabel: UILabel!
+    
+    
+    @IBOutlet var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,9 +29,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-    @IBOutlet weak var Label: UILabel!
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var submitemail: UIButton!
+    @IBAction func sendEmail(sender: AnyObject) {
+    }
+    
+    
+    @IBAction func leftGesture(sender: UISwipeGestureRecognizer) {
+    }
 }
+
+
 
